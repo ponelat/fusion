@@ -10,6 +10,8 @@ var App = React.createClass({
   componentDidMount: function() {
     $(document.body).on('keydown', this.handleKeyUpDown);
     $(document.body).on('keyup', this.handleKeyUpDown);
+    window.setState = this.setState.bind(this)
+    window.app = this
   },
 
   componentWillUnmount: function() {
